@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Outfit:wght@100..900&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{
+scroll-behavior:smooth;scroll-padding-top:80px;}
+
+section{min-height:100vh;padding:80px 20px;}
+
+#skills{padding:40px 0;margin-top:-40px;background:linear-gradient(180deg,#f7eef3 0%,#f1e3ea 100%);}
+
+body{background:white;font-family:"Outfit", sans-serif;}
+
+header{ position:fixed;top:0;width:100%;z-index:10;text-align:center;background:#6b4c5a;color:white;padding:10px;}
+
+
+a:link{color:#eda8c8;}
+
+a:visited{color:#eda8c8;}
+
+a:hover{color:#ffd1e6;}
+
+a:active{color:#b12a62;}
+
+
+
+#title{font-family:"Outfit", sans-serif;}
+
+nav{margin-top:10px;}
+
+nav a{color:#eda8c8;text-decoration:none;margin:0 10px;font-family:"Outfit", sans-serif;}
+
+nav a:hover{color:#ffd1e6;}
+
+
+section{min-height:100vh;padding:80px 20px;}
+
+.container{max-width:1100px;margin:auto;}
+
+/*para funcionar a animação trabalhosa*/
+
+@keyframes slideIn{from{opacity:0;transform:translateX(60px);}to{opacity:1;transform:translateX(0);}}
+
+
+
+/* sobre minhas imagens*/
+
+.hero .container{display:flex;align-items:center;justify-content:center;gap:80px;}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f7e7ef,#e9d3df,#f7e7ef);position:relative;overflow:hidden;}
+
+.hero div{max-width:400px;}
+
+.hero img{width:clamp(220px, 18vw, 320px);border-radius:25px;object-fit:cover;box-shadow:0 20px 40px rgba(0,0,0,0.2),0 0 60px rgba(237,168,200,0.45);}
+
+.hero img:hover{transform:scale(1.05);}
+
+.hero h2{color: #af3e6dc5;font-size:48px;font-family:"Cinzel Decorative", serif;letter-spacing:2px;font-size:clamp(36px, 4vw, 64px);}
+
+.hero p{font-size:20px;margin-top:8px;opacity:0.8; font-size:clamp(18px, 1.5vw, 22px);}
+
+.hero p::after{content:"";display:block;width:80px;height:3px;background:#eda8c8;margin-top:10px;}
+
+.hero::before{content:"";position:absolute;width:400px;height:400px;background:#f2d5e3;border-radius:50%;filter:blur(120px);top:20%;left:10%;z-index:0;}
+
+.hero *{position:relative;z-index:1;}
+
+
+/*sobre euzinhaaaa*/
+
+#about{background:#f9f4f7;min-height:100vh;display:flex;align-items:center;}
+
+#about h1{color: #af3e6dc5;}
+
+#about h1::after{content:"";display:block;width:80px;height:3px;background:#eda8c8;margin:10px auto 0;border-radius:3px;}
+
+.about-container{display:flex;align-items:center;gap:60px;flex-direction:row-reverse;}
+
+.about-container img{width:520px;border-radius:20px;box-shadow:0 20px 40px rgba(71, 8, 32, 0.699);}
+
+.about-text{max-width:600px;}
+
+.about-container img:hover{transform:translateY(-8px);transition:0.3s;}
+
+
+h1{font-family:"Cinzel Decorative", serif;font-size:48px;margin-bottom:20px;text-align:center;}
+
+#about p{font-size:18px;line-height:1.6;max-width:700px;margin:auto;text-align:justify;}
+
+
+/* MINHAS SKILLS (MELHORAR ESSA PARTE COM O VINI)*/
+
+
+.skills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;list-style:none;margin-top:-20px;padding: 25px 0; }
+
+.skills button{background:#f2d5e3;border:none;padding:10px 20px;border-radius:20px;font-size:16px;cursor:pointer;transition:0.3s;}
+
+.skills button:hover{background:#eda8c8;transform:translateY(-2px);}
+
+.skills button.active{background:#d48aaa;color:white;transform:scale(1.08)}
+
+.skills button.active:hover{background:#c46b94;}
+
+.skill-display{margin-top:20px;display:flex;justify-content:center;align-items:center;width:100%;min-height:350px;}
+
+.skill-display img{display:none;max-width:90%;height:auto;border-radius:18px;box-shadow:0 20px 50px rgba(87, 8, 57, 0.849);transition:all 0.5s ease;}
+
+.skill-display img.active{display:block;animation:slideIn 0.5s ease;}
+
+.skill-display img.active{opacity:1;transform:translateX(0);}
+
+.skills li{background:#f2d5e3;padding:10px 20px;border-radius:20px;font-size:16px;}
+
+#skills {color: #af3e6dc5;}
+
+#skills h1::after{content:"";display:block;width:80px;height:3px;background:#eda8c8;margin:10px auto 0;border-radius:3px;}
+
+
+/*Projetos (utilizar mesmo script que as skills ou css?)*/
+
+#projects{color: #af3e6dc5; background:linear-gradient(135deg,#f7e7ef,#e9d3df,#f7e7ef);position:relative;overflow:hidden;;min-height:100vh;display:flex;align-items:center;padding-top: 1px;}
+
+#projects h1::after{content:"";display:block;width:80px;height:3px;background:#eda8c8;margin:10px auto 0;border-radius:3px;}
+
+.card{background:white;border-radius:18px;box-shadow:0 10px 30px rgba(221,156,156,0.15);width:100%;max-width:520px;min-height:630px;overflow:hidden;
+transition:transform 0.3s ease, box-shadow 0.3s ease;}
+
+.card img{width:calc(100% - 40px);  height:300px;object-fit:cover;display:block;margin:0 auto;margin-bottom:25px;border-radius:12px;margin-top: 20px;}
+
+.card h3{font-family:"Cinzel", serif;font-size:22px;padding:18px 20px 10px 20px;text-align:center;}
+
+.card p{padding:10px 25px 25px 25px;color:#555;text-align:center;text-align:justify;}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:50px;margin-top:60px;max-width:1100px;margin:60px auto; }
+
+.card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 25px 50px rgba(122, 36, 69, 0.418);}
+
+
+.card-link{text-decoration:none;color:inherit;display:block;}
+
+/*Contatinhos :3*/
+
+#contact{color: #af3e6dc5;background:#fadfee;text-align:center;font-size:18px;}
+
+#contact h1::after{content:"";display:block;width:80px;height:3px;background:#eda8c8;margin:10px auto 0;border-radius:3px;}
+
+.contact-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;max-width:900px;margin:50px auto 0;}
+
+.contact-item{background:white;padding:25px 40px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.1);text-align:center;min-width:220px;transition:0.3s;}
+
+.contact-item:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,0,0,0.15);}
+
+.contact-item h3{margin-bottom:10px;font-family:"Cinzel", serif;}
+
+.contact-item a{text-decoration:none;font-weight:500;}
+
+.contact-container{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1100px;margin:50px auto 0;}
+
+.contact-card{background:white;padding:30px 25px;border-radius:18px;box-shadow:0 15px 35px rgba(0,0,0,0.08);text-align:center;transition:0.3s;min-height:140px;
+display:flex;flex-direction:column;justify-content:center;}
+
+.contact-card:hover{transform:translateY(-8px);box-shadow:0 20px 45px rgba(0,0,0,0.15);}
+
+.contact-card .icon{font-size:28px;margin-bottom:10px;}
+
+.contact-card h3{margin-bottom:8px;font-family:"Cinzel", serif;}
+
+.contact-card a{text-decoration:none;color:#af3e6dc5;font-weight:500;}
+
+.contact-card a{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+
+
+
+footer{background:#deb8c9;padding:10px;text-align:center;margin-top:40px;}
+
+#footer{text-align:center;}
+
+
+/*implementaar modo escuro*/
+#themetoggle{position:absolute;right:20px;top:20px;background:none;border:none;font-size:22px;cursor:pointer;}
+
+body.dark-mode{background:#121212;color:#e4e4e4;}
+
+body.dark-mode header{background:#2a1c24;}
+
+body.dark-mode .hero{background:linear-gradient(135deg,#1c1c1c,#2a1c24,#1c1c1c);}
+
+body.dark-mode #about{background:#1a1a1a;}
+
+body.dark-mode #skills{background:linear-gradient(180deg,#1c1c1c,#2a1c24);}
+
+body.dark-mode #projects{background:linear-gradient(135deg,#1c1c1c,#2a1c24,#1c1c1c);}
+
+body.dark-mode #contact{background:#1a1a1a;}
+
+body.dark-mode .card{background:#242424;color:#e4e4e4;}
+
+body.dark-mode footer{background:#2a1c24;}
+
+body.dark-mode .contact-card{background:#1e1e1e;color:#eee;}
+
+body.dark-mode .contact-card a{color:#ff79b0;}
+
+
+
+@media (max-width:900px){
+
+.contact-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:500px){
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
+
+
+@media (max-width:768px){
+
+.hero{flex-direction:column;text-align:center;}
+
+.contact-container{grid-template-columns:1fr;}
+
+.projects{grid-template-columns:1fr;}
+
+.hero h2{font-size:30px;}
+
+h1{font-size:36px;}
+
+.about-container{flex-direction:column;text-align:center;}
+
+.about-container img{width:220px;}
+
+}
