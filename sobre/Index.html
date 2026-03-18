@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Bruna Menezes</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/sobre/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+<header>
+<h2 id="title">Portfólio</h2>
+
+<nav>
+<a href="#home">Home</a> |
+<a href="#about">About</a> |
+<a href="#skills">Skills</a> |
+<a href="#projects">Projects</a> |
+<a href="#contact">Contacts</a>
+<button id="themetoggle">🌙</button>
+</nav>
+</header>
+
+
+<section id="home" class="hero">
+
+<div class="container">
+
+<img src="bruna.png" alt="Bruna">
+
+<div>
+<h2>Bruna Menezes</h2>
+<p>Digital Illustrator & 3D Artist</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="about">
+
+<div class="container about-container">
+
+<img src="Eu.jpeg" alt="Bruna illustration">
+<div class="about-text">
+
+<h1>About Me</h1>
+
+<p>
+Hi! I'm Bruna, a student at Universidade Lusófona do Porto.
+I’ve worked on several game development projects and I’m active
+in different Discord art communities where I like to draw and share my work.
+</p>
+</div>
+</div>
+
+</section>
+
+
+<section id="skills">
+
+<div class="container">
+
+<h1>My Skills</h1>
+
+<div class="skills">
+<button class="active" onclick="showSkill('illustration')">Digital Illustration</button>
+<button onclick="showSkill('modeling')">3D Modeling</button>
+<button onclick="showSkill('concept')">Character Concept</button>
+<button onclick="showSkill('design')">Ui/Ux Designer</button>
+
+</div>
+
+<div class="skill-display">
+
+<img id="illustration" class="active" src="Capturar.jpg">
+<img id="modeling" src="render 2.png">
+<img id="concept" src="concept.jpg">
+<img id="design" src="Ativo 16.png">
+
+
+</div>
+
+</div>
+
+</section>
+<section id="projects">
+
+<div class="container">
+
+<h1>My Projects</h1>
+
+<div class="projects">
+
+    <a href="https://luarzinha.itch.io/slaughterhouse" target="_blank" class="card-link">
+
+<div class="card">
+<h3>SlaughterHouse</h3>
+<img src="Prancheta 1.png" alt="Project 1">
+<p>The SlaughterHouse is a top-down puzzle and horror game that combines exploration and the terror of being chased to rush the player to escape
+the haunted house of the monster that kidnapped them.
+The player runs through a village house where they discover various frightening things.</p>
+</div>
+</a>
+
+    <a href="https://bpgodinho.itch.io/assembly-lines"  target="_blank" class="card-link">
+
+<div class="card">
+<h3>Assembly Lines</h3>
+<img src="assembly lines.png" alt="Project 1">
+
+<p>Assembly Lines is a puzzle video game where the player must connect machines with different functions to create an assembly line that produces the required parts. 
+The challenge lies in organizing the machines logically and efficiently, respecting the necessary production order.</p>
+</div>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h1>Contacts</h1>
+
+<div class="contact-container">
+
+<div class="contact-card">
+<div class="icon">✉</div>
+<h3>Email</h3>
+<a href="mailto:bruna.menezes2000@gmail.com">
+bruna.menezes2000@gmail.com
+</a>
+</div>
+
+<div class="contact-card">
+<div class="icon">💼</div>
+<h3>Behance</h3>
+<a href="https://www.behance.net/brunamsilva1" target="_blank">Behance | Bruna Menezes </a>
+</div>
+
+<div class="contact-card">
+<div class="icon">🎮</div>
+<h3>Itch.io</h3>
+<a href="https://luarzinha.itch.io" target="_blank">Itch.io | Luarzinha</a>
+</div>
+
+<div class="contact-card">
+<div class="icon">🎨</div>
+<h3>ArtStation</h3>
+<a href="https://www.artstation.com/luar5" target="_blank">ArtStation | Bruna Menezes</a>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+<p>© Bruna Menezes | 2026</p>
+</footer>
+
+
+
+
+<script>
+
+function showSkill(skill){
+
+let images = document.querySelectorAll(".skill-display img");
+let buttons = document.querySelectorAll(".skills button");
+
+images.forEach(img=>{
+img.classList.remove("active");
+});
+
+buttons.forEach(btn=>{
+btn.classList.remove("active");
+});
+
+document.getElementById(skill).classList.add("active");
+
+event.target.classList.add("active");
+
+}
+const themeButton = document.getElementById("themetoggle");
+
+themeButton.addEventListener("click", () => {
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+localStorage.setItem("theme","dark");
+themeButton.textContent = "☀️";
+}else{
+localStorage.setItem("theme","light");
+themeButton.textContent = "🌚";
+}
+
+});
+
+window.onload = () => {
+
+const theme = localStorage.getItem("theme");
+
+if(theme === "dark"){
+document.body.classList.add("dark-mode");
+themeButton.textContent = "☀️";
+}else{
+themeButton.textContent = "🌚";
+}
+
+};
+
+</script>
+</body>
+</html>
